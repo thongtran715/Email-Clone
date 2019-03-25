@@ -84,10 +84,10 @@ class MailListReceive extends React.Component{
         const { classes } = this.props;
         var messages = this.props.messages;
         const GroupsOfMessages = messages.map(message => {
-            if (message['toUser'] === "tienle123") {
+            if (message['toUser'] === localStorage.getItem("username")) {
                    return <ListItem alignItems="flex-start" key={message["mailId"]} button={true}>
                         <ListItemAvatar>
-                            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                            <Avatar alt="Remy Sharp" src="https://s3.us-east-2.amazonaws.com/rcs-demo/others/Screen+Shot+2018-08-19+at+11.21.35+AM.png" />
                         </ListItemAvatar>
                         <ListItemText
                             primary={message["fromUser"]}
@@ -151,7 +151,6 @@ class MailListReceive extends React.Component{
                             variant="outlined"
                             name="title"
                             onChange={this.handleOnChange}
-
                         />
                     </ListItem>
                     <Divider />

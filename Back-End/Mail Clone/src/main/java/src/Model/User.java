@@ -12,7 +12,7 @@ public class User {
     private String username;
     private String password;
     private String name;
-    private boolean isRead;
+    private String avartarUrl;
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "user_mail", joinColumns
             = @JoinColumn(name = "user_id",
@@ -61,11 +61,11 @@ public class User {
         this.mailList = mailList;
     }
 
-    public boolean isRead() {
-        return isRead;
+    public String getAvartarUrl() {
+        return avartarUrl;
     }
 
-    public void setRead(boolean read) {
-        isRead = read;
+    public void setAvartarUrl(String avartarUrl) {
+        this.avartarUrl = avartarUrl;
     }
 }

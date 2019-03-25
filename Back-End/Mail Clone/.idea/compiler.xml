@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Mail Clone" />
+        <module name="Mail-Clone" />
       </profile>
     </annotationProcessing>
   </component>

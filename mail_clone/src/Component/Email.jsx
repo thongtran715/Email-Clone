@@ -21,7 +21,7 @@ export default class Email extends React.Component {
         }));
     };
     async fetchMessages(){
-        const url = DEVELOPMENT_URL + "/mail/receive/tienle123";
+        const url = DEVELOPMENT_URL + "/mail/receive/" + localStorage.getItem("username");
         const response = await fetch(url);
         const body = await response.json();
         var meggs = [];
@@ -54,7 +54,7 @@ export default class Email extends React.Component {
     }
     onSendMessage = (sendTo, title, content) => {
         try {
-            this.clientRef.sendMessage("/app/all", JSON.stringify({"content": content, "fromUser": "thongtran715", "toUser": sendTo, "title": title}));
+            this.clientRef.sendMessage("/app/all", JSON.stringify({"content": content, "fromUser": localStorage.getItem("username"), "toUser": sendTo, "title": title}));
             return true;
         } catch(e) {
             return false;

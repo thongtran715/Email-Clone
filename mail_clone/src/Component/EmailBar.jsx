@@ -53,10 +53,12 @@ const styles = theme => ({
 });
 
 class EmailBar extends React.Component {
-    state = {
-        mobileOpen: false,
-    };
-
+    constructor(props){
+        super(props);
+        this.state = {
+            mobileOpen: false
+        }
+    }
     handleDrawerToggle = () => {
         this.setState(state => ({ mobileOpen: !state.mobileOpen }));
     };
@@ -134,10 +136,12 @@ class EmailBar extends React.Component {
                         </Drawer>
                     </Hidden>
                 </nav>
+
                 <main className={classes.content}>
                     <div className={classes.toolbar} />
                     <Email/>
                 </main>
+
             </div>
         );
     }

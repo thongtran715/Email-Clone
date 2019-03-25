@@ -9,13 +9,12 @@ public class Mail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long mailId;
-
     private String timeStamp;
     private String content;
     private String toUser;
     private String fromUser;
     private String title;
-
+    private boolean isRead;
     public Mail(){}
 
     public Mail(String content, String sender) {
@@ -69,5 +68,12 @@ public class Mail {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+    public boolean isRead() {
+        return isRead;
+    }
+
+    public void setRead(boolean read) {
+        isRead = read;
     }
 }
