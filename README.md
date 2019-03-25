@@ -76,7 +76,6 @@ Here is the 24 hours challenge for myself learning and doing how to do an Email 
             messages: [msg,...prevState.messages]
         }));
     };
-    ```
     Whatever the server sends us the data back, we can append the data to the head of the array. 
     Cool, now we know how to use React and Spring Boot Java for Real Time Application. 
   
